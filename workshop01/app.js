@@ -27,7 +27,7 @@ const texts = [
 
 app.get("/", (req, res) => {
   const randomText = texts[Math.floor(Math.random() * texts.length)];
-  res.render("index", { text: randomText });
+  res.status(200).render("index", { text: randomText });
 });
 
 app.listen(PORT, () => {
